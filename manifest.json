@@ -2,8 +2,12 @@
 	"manifest_version": 2,
 	"name": "Translator",
 	"description": "Lightweight tool for translating selected text. Select text and press T or choose Translate in context menu",
-	"version": "1.0",
-	"permissions": ["contextMenus"],
+	"version": "1.1",
+	"permissions": ["contextMenus", "storage"],
+	"options_ui": {
+		"page": "options/options.html",
+		"browser_style": true
+	},
 	"background": {
 		"scripts": [
 			"background.js"
