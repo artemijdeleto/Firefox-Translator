@@ -6,7 +6,7 @@
 	"permissions": ["contextMenus", "storage"],
 	"options_ui": {
 		"page": "options/options.html",
-		"browser_style": true
+		"browser_style": false
 	},
 	"background": {
 		"scripts": [
