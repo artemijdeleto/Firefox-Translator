@@ -1,15 +1,26 @@
 browser.contextMenus.create({
-	id: 'selection',
+	id: 'translate',
 	title: 'Translate (T̲)',
 	contexts: ['selection']
 });
 
-browser.contextMenus.onClicked.addListener(function(info)
+browser.contextMenus.create({
+	id: 'newtab',
+	title: 'Open Google Translate'
+});
+
+browser.contextMenus.onClicked.addListener(function (info)
 {
 	switch (info.menuItemId)
 	{
-		case 'selection':
+		case 'translate':
 			translate(info.selectionText);
+			break;
+
+		case 'newtab':
+			browser.tabs.create({
+				url: 'https://translate.google.com/'
+			});
 			break;
 	}
 });
